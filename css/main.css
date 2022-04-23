@@ -1,0 +1,13 @@
+#one {
+  background-color: red;
+  height: 100px;
+}
+
+.one {
+  background-color: green;
+  height: 50px;
+}
+
+div {
+  font-weight: bolder;
+}
