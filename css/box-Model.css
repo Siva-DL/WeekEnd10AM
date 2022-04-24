@@ -1,0 +1,91 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+}
+
+p {
+  width: 300px;
+  /* background-color: crimson; */
+  color: #000;
+  text-align: justify;
+}
+
+/* BoxModel: padding, border, margin, outline */
+
+/* Padding: space b/w box and content */
+
+p {
+  padding: 10px;
+  padding: 10px 20px 10px 20px;
+  padding: 11px 21px;
+
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+  /* Border: */
+
+  border: 5px solid red;
+
+  /* border-top-width: 5px;
+  border-top-style: double;
+  border-top-color: greenyellow; */
+
+  border-bottom-width: 5px;
+  border-bottom-style: double;
+  border-bottom-color: greenyellow;
+  /* 
+  border-left-width: 5px;
+  border-left-style: groove;
+  border-left-color: crimson;
+
+  border-right-width: 5px;
+  border-right-style: groove;
+  border-right-color: crimson; */
+
+  /* Margins:  */
+
+  margin-left: 560px;
+  margin-right: 560px;
+  /* margin-bottom: 200px; */
+  margin-top: 200px;
+
+  margin: 200px auto;
+  margin: 100px auto 100px auto;
+
+  box-sizing: border-box;
+}
+
+table {
+  width: 50%;
+  margin: auto;
+}
+table,
+tr,
+td,
+th {
+  /* border: 1px solid; */
+  border-collapse: collapse;
+  text-align: center;
+  padding: 5px;
+  border-bottom: 2px solid blue;
+}
+
+.card {
+  width: 300px;
+  border: 2px solid #ccc;
+  background-color: aliceblue;
+  margin: 25px auto;
+  text-align: center;
+  /* padding: 20px 10px; */
+}
+
+.card-body {
+  background-color: rgb(28, 102, 140);
+  color: #fff;
+  /* padding: 10px; */
+  border-top: 1px solid #fff;
+}
