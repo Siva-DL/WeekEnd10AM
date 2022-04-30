@@ -1,0 +1,13 @@
+div {
+  display: none;
+  width: 250px;
+  background-color: red;
+  margin-right: 20px;
+}
+
+span {
+  width: 250px;
+  display: inline-block;
+  background-color: red;
+  margin-left: 20px;
+}

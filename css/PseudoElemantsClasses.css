@@ -1,0 +1,91 @@
+a:link {
+  color: orange;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:active {
+  color: greenyellow;
+}
+
+a:visited {
+  color: red;
+}
+
+/* common colors */
+
+/* .bg-green {
+  background-color: greenyellow;
+}
+
+.bg-red {
+  background-color: crimson;
+} */
+
+ul li:nth-child(2n + 2) {
+  background-color: red;
+}
+
+ul li:nth-child(2n + 1) {
+  background-color: green;
+}
+
+/* ul li:nth-child(4) {
+  background-color: lightskyblue;
+  padding: 10px;
+} */
+
+ul li:first-child {
+  background-color: orange;
+}
+
+ul li:last-child {
+  background-color: orange;
+}
+
+div p:only-child {
+  background-color: green;
+  padding: 10px;
+  font-size: 20px;
+}
+
+ul li:hover {
+  padding: 10px;
+}
+/* Elements */
+p {
+  width: 300px;
+  margin: auto;
+}
+
+p::first-letter {
+  font-size: 24px;
+  font-style: italic;
+  color: red;
+}
+
+p::first-line {
+  color: brown;
+}
+
+p::selection {
+  background-color: bisque;
+  color: brown;
+}
+
+h1 {
+  width: 400px;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+  /* text-decoration: underline; */
+  /* border-bottom: 2px solid; */
+}
+h1::before {
+  content: "😀";
+}
+h1::after {
+  content: "👍";
+}

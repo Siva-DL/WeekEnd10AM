@@ -1,0 +1,28 @@
+ul {
+  width: 500px;
+  margin: auto;
+  height: 350px;
+  list-style-type: none;
+  background-color: yellow;
+  /* list-style: none; */
+}
+ul li {
+  background-color: crimson;
+  margin-top: 1px;
+  float: left;
+  width: 32.5%;
+  text-align: center;
+  /* border: 1px solid #fff; */
+  margin-left: 2px;
+}
+
+p {
+  width: 300px;
+  margin: auto;
+  text-align: justify;
+}
+
+img {
+  float: right;
+  margin: 10px;
+}
