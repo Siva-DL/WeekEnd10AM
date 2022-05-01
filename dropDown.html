@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/removeDeafults.css">
+    <script src="https://kit.fontawesome.com/39442b0661.js" crossorigin="anonymous"></script>
+    <style>
+        .dropDown {
+            width: 150px;
+            padding: 10px;
+            margin: 100px auto;
+            text-align: center;
+            border: 1px solid;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .dropMenu {
+            display: none;
+            position: absolute;
+            width: 100%;
+            list-style: none;
+            top: 42px;
+            left: 0px;
+            border: 1px solid;
+        }
+
+        .dropMenu li {
+            padding: 10px;
+            border-bottom: 1px solid;
+        }
+
+        .dropDown:hover .dropMenu {
+            display: block;
+        }
+
+        h1 {
+            /* display: none; */
+            /* visibility: hidden; */
+            /* opacity: 0; */
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 1px solid;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Button / Menu Item
+            - onHover: list of Items
+     -->
+    <h1> This is header..</h1>
+    <h4> hello </h4>
+
+    <div class="circle"> Element </div>
+    <div class="dropDown">
+        <h3> DropDown <i class="fa-solid fa-caret-down"></i></h3>
+        <ul class="dropMenu">
+            <li> Menu 1</li>
+            <li> Menu 2</li>
+            <li> Menu 3</li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

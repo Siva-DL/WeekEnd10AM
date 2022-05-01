@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 100px;
+            border: none;
+            display: block;
+            background-color: aquamarine;
+            margin: auto;
+            padding: 10px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            /* transition-duration: 0.3s; */
+            /* transition-delay: 1s; */
+            /* transition-property: background-color letter-spacing; */
+            transition-timing-function: cubic-bezier(.32, 1.56, .8, -0.4);
+        }
+
+        button:hover {
+            width: 200px;
+            background-color: rgb(33, 213, 153);
+            letter-spacing: 2px;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 75px;
+        }
+
+        ul li {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 200px;
+            transition: 0.5s;
+        }
+
+        ul li:first-child:hover {
+            transform: scale(0.5, 0.5);
+        }
+
+        ul li:nth-child(2):hover {
+            transform: rotateZ(360deg);
+        }
+
+        ul li:nth-child(3):hover {
+            transform: translate(-100px, -100px);
+        }
+
+        ul li:nth-child(4):hover {
+            transform: skewY(45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button"> Home </button>
+
+
+    <!-- scale, rotate, translate, skew -->
+
+
+    <ul>
+        <li>
+            scale
+        </li>
+        <li>
+            rotate
+        </li>
+        <li>
+            translate
+        </li>
+        <li>
+            skew
+        </li>
+    </ul>
+</body>
+
+</html>
