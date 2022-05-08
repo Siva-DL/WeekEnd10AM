@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #userName:focus {
+            outline: none;
+        }
+
+        #userName {
+            width: 300px;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid palevioletred;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/">
+        <div style="padding: 10px;">
+            <label for="">minimum 10 chars</label>
+            <input type="text" maxlength="10" placeholder="minimum 10 chars" id="userName">
+        </div>
+        <div>
+            <input type="password" name="" id="" disabled>
+        </div>
+        <input type="email" name="" id="" required>
+        <input type="number" name="" id="" required>
+        <input type="search" name="" id="" readonly>
+        <input type="range">
+        <input type="color">
+        <input type="date">
+        <input type="file">
+
+        <input type="radio" name="gender" id="male">
+        <label for="male"> Male </label>
+        <input type="radio" name="gender" id="female">
+        <label for="female"> Female </label>
+        <input type="checkbox" id="hyd"> <label for="hyd"> Hyderabad </label>
+
+        <select name="" id="">
+            <option value="none"> -- Please choose a value -- </option>
+            <option value="hyd"> Hyderabad </option>
+            <option value="bng"> Banglore </option>
+            <option value="pune"> Pune </option>
+        </select>
+        <textarea name="" id="" cols="30" rows="10">
+
+    </textarea>
+
+
+        <input type="submit" value="submit">
+        <input type="button" value="submit">
+        <input type="reset" value="submit">
+
+
+        <button> LOGIN </button>
+        <button type="submit"> Register </button>
+        <button type="reset"> Reset </button>
+    </form>
+</body>
+
+</html>
