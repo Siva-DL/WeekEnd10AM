@@ -1,0 +1,65 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+}
+#main {
+  height: 100vh;
+  background-image: url(/images/login3.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formWrap {
+  background-color: rgba(32, 87, 159, 0.7);
+  width: 40%;
+  padding-top: 25px;
+  min-height: 50vh;
+  /* display: flex; */
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+.form-input {
+  width: 75%;
+  margin: 15px auto;
+  /* border: 1px solid #ccc; */
+  display: flex;
+  border-radius: 5px;
+}
+.form-input input {
+  width: 100%;
+  padding: 5px 15px;
+  line-height: 20px;
+  font-size: 18px;
+  border: none;
+  border-left: 1px solid #ccc;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.form-input input:focus {
+  outline: none;
+}
+.fa-solid {
+  font-size: 25px;
+  padding: 10px;
+  color: rgb(255 42 51);
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.form-input-check {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
