@@ -9,31 +9,73 @@
 </head>
 
 <body>
-    <div id="demo"> Demo with ID</div>
-    <div class="demo"> Demo with Class</div>
+    <div id="demo">
+        <h1>Demo with ID</h1>
+    </div>
+    <div class="demo">
+        <h1 id="demoH1">Demo with Class</h1>
+    </div>
+    <div class="demo"> Demo with Class 1</div>
     <div> Element</div>
 
+    <input type="text" id="demoInput" value="userName">
+
     <script>
-        // Id, Class, tagName
+        // console.log()
+        // Id, Class, tagName / Element Names
 
         var _demoByID = document.getElementsByClassName('demo')[0];
 
 
         // console.log(document.getElementById('demo'));
-        // console.log(document.getElementsByClassName('demo')[0]);
-        // console.log(document.getElementsByTagName('div')[2]);
+        // console.log(document.getElementsByClassName('demo')); // [.demo,]
+        // console.log(document.getElementsByTagName('div')[2]); // [0, 1, 2, 3]
+        // console.log(document.querySelector('#demo'));
+        // console.log(document.querySelector('.demo'));
         // console.log(document.querySelector('div'));
-
-        // console.log(_demoByID.innerText)
-        // _demoByID.innerText = '<h1> This is JS Content</h1>'
-
-        _demoByID.innerHTML = '<h1> This is JS Content</h1>'
+        // console.log(document.querySelectorAll('.demo'));
 
 
 
 
+        // Events: mouseover, out, down, click, dblclick
 
 
+        //1: element.addEventListener('eventName', cb, boolean);
+
+        // _demoByID.addEventListener('click', function () {
+        //     console.log("0", _demoByID.innerText) // getter
+        //     alert(0)
+        //     // console.log(_demoByID.innerHTML) // getter
+        //     // _demoByID.innerText = '<h1> This is JS Content</h1>' // setter
+        //     // _demoByID.innerHTML = '<h1> This is JS Content</h1> <p> Hello </p>'
+        // }, false)
+
+
+        document.querySelector('#demoH1').addEventListener('dblclick', function () {
+            console.log("1", _demoByID.innerText) // getter
+            alert(1)
+        }, false)
+
+        // 2: element.onclick = fn();
+
+        document.querySelector('#demo').onclick = function () {
+            console.log('with onclick....!')
+            console.log(document.querySelector('#demoInput').value);
+        }
+
+        // document.querySelector('#demoInput').onkeyup = function () {
+        //     console.log(this.value)
+        // }
+
+        document.querySelector('#demoInput').onfocusin = function () {
+            console.log(this.value)
+        }
+
+
+        document.querySelector('#demoInput').addEventListener('focusout', function () {
+            console.log(this.value);
+        });
 
     </script>
 </body>
