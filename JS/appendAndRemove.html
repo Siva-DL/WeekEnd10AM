@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            width: 200px;
+            height: 50px;
+            background-color: crimson;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        li:nth-child(even) {
+            background-color: #888;
+        }
+
+        .fs-i {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="demo">
+        <input type="text" id="addValue" placeholder="Please add a new Value">
+        <button type="button" id="add">add</button>
+    </div>
+    <ul id="LiItems">
+        <li>
+            1
+        </li>
+        <li>
+            2
+        </li>
+    </ul>
+    <script>
+        const LiItems = document.getElementById('LiItems');
+        // LiItems.innerHTML = "<li>1</li><li>2</li><li>3</li><li>4</li>";
+
+        // createElement
+        // innerText
+        // appendChild
+        // removeChild
+        // children
+        // childNodes
+
+
+
+        document.querySelector('#add').onclick = function () {
+            const _newLi = document.createElement('li')
+            console.log(document.querySelector('#addValue').value);
+            _newLi.innerText = document.querySelector('#addValue').value;
+            console.log(_newLi);
+            _newLi.className = "fs-i";
+
+            if (_newLi.innerText === "1") {
+                _newLi.style.fontSize = "30px"
+            }
+            removeLi(_newLi);
+            LiItems.appendChild(_newLi);
+
+        }
+        // const _newLi = "<li>3</li>" // mot allowed for appendChild
+        // const _newLi = document.createElement('li')
+        // _newLi.innerText = "3";
+        // const _newLi1 = document.createElement('li')
+        // _newLi1.innerText = "4";
+        // console.log(_newLi);
+        // LiItems.appendChild(_newLi);
+        // LiItems.appendChild(_newLi1);
+
+        for (let i = 0; i < LiItems.children.length; i++) {
+            console.log(LiItems.children[i].className = "fs-i")
+            if (LiItems.children[i].innerText === "1") {
+                LiItems.children[i].style.fontSize = "30px"
+            }
+            removeLi(LiItems.children[i])
+
+
+        }
+
+        function removeLi(Li) {
+            Li.onclick = function () {
+                LiItems.removeChild(Li)
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

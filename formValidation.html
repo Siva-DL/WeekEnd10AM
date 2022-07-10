@@ -1,23 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- CSS only -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <style>
+        .parent {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .child {
+            flex-grow: 1;
+        }
+    </style>
 </head>
 
 <body>
+    <main>
+        <header class="container-fluid bg-danger text-white">
+            <div class="container">
+                Hello!
+            </div>
+        </header>
 
+        <!-- row - 12-cols: 10 +2, 5+7, 6+6, 4+4+4, 7+2+2+1 -->
+        <div class="row g-0">
+            <div class="col-lg-1 col-md-2 bg-success"> Child </div>
+            <div class="col-lg-1 col-md-2 bg-info"> Child </div>
+            <div class="col-lg-1 col-md-2 bg-success"> Child </div>
+            <div class="col-lg-1 col-md-2 bg-info"> Child </div>
+            <div class="col-lg-1 col-md-2 bg-success"> Child </div>
+            <div class="col-lg-1 col-md-2 bg-info"> Child </div>
+            <div class="col-lg-1 bg-success col-md-2"> Child </div>
+            <div class="col-lg-1 bg-info col-md-2"> Child </div>
+            <div class="col-lg-1 bg-success col-md-2"> Child </div>
+            <div class="col-lg-1 bg-info col-md-2"> Child </div>
+            <div class="col-lg-1 bg-success col-md-2"> Child </div>
+            <div class="col-lg-1 bg-info col-md-2"> Child </div>
+
+            <div class="col-lg-1 bg-info"> Child </div>
+        </div>
+        <hr>
+
+        <div class="container">
+            <div class="row bg-danger">
+                <div class="col-md-4  bg-dark text-bg-dark order-md-1"> CHild One </div>
+                <!-- <div class="col-md-4 bg-dark text-bg-dark"> CHild One </div> -->
+                <div class="col-md-4 offset-md-4 bg-warning order-md-0"> CHild Two </div>
+            </div>
+        </div>
+
+
+
+        <div class="container mt-5">
+            <div class="row justify-content-center bg-secondary w-50 m-auto pt-5 pb-5 rounded">
+                <div class="col-8">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="userName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Password">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div> -->
+                    <button type="button" class="btn btn-primary w-100"> Send Message </button>
+                </div>
+                <!-- <div class="col-4">
+                    <img src="./images/nature-g99f2194a7_1280.jpg" alt="" class="img-fluid">
+                </div> -->
+            </div>
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

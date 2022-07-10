@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            transition: 1s;
+        }
+
+        .demo {
+            width: 200px;
+            height: 200px;
+            background-color: crimson;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demo" data-count="123">
+        Hello
+    </div>
+    <div class="addId"> Hello New ID </div>
+    <a href="#"> Google </a>
+
+    <script>
+        const _demo = document.getElementById('demo');
+        _demo.className = "demo demo1";
+        // _demo.className = "demo1";
+
+        console.log(_demo.classList);
+        _demo.classList.remove('demo1')
+        // console.log()
+        console.log(_demo.classList);
+
+        const _demoClass = document.getElementsByClassName('addId')[0];
+        _demoClass.id = "newId"
+        // document.querySelector('a').href = "google.com";
+
+        // setAttribute, getAttribute, removeAttribute;
+
+        document.querySelector('a').setAttribute('data-count', 'anchorID');
+        console.log(document.querySelector('a').getAttribute('class'))
+        document.querySelector('a').removeAttribute('id');
+        console.log(document.querySelector('a').getAttribute('id'));
+
+        // element.style.cssProperty = "value"
+        _demoClass.style.fontSize = "40px";
+        _demo.style.marginLeft = "0px";
+        document.querySelector('a').onclick = function () {
+            // _demoClass.style.display = "none";
+
+            console.log(demo.style.marginLeft);
+            // if (demo.style.marginLeft == "0px") {
+            //     _demo.style.marginLeft = "300px";
+            // } else {
+            //     _demo.style.marginLeft = "0px";
+            // }
+
+            demo.style.marginLeft = demo.style.marginLeft == "0px" ? "300px" : "0px";
+        }
+
+
+    </script>
+</body>
+
+</html>
