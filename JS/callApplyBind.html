@@ -9,7 +9,56 @@
 </head>
 
 <body>
+    <div>
+        CLick
+    </div>
+    <script>
+        // console.log(this)
+        demo();
+        function demo() {
+            console.log(this)
+        }
 
+        const test = {
+            name: 'test',
+            testfn() {
+                console.log(this);
+            }
+        }
+        console.log(test);
+
+        document.getElementsByTagName('div')[0].onclick = function () {
+            console.log(this);
+        }
+
+
+
+        let persons = {
+            name: 'p1',
+            age: 31,
+        }
+
+        let emplyees = {
+            name: 'e1',
+            age: 28,
+        }
+
+        function demoPerson(contact) {
+            console.log(this.name, this.age, contact)
+        }
+
+
+
+        demoPerson.call(persons, 1212121);
+        demoPerson.apply(emplyees, [1212121]);
+        // demoPerson();
+
+        let bindCall = demoPerson.bind(emplyees, 1212121);
+
+        bindCall();
+
+
+    </script>
 </body>
 
 </html>

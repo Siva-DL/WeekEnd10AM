@@ -25,19 +25,32 @@
                     <label for="username" class="form-label">Name</label>
                     <input type="text" class="form-control shadow-none border-dark" id="Username" placeholder="Username"
                         autocomplete="off">
+                    <div class="alert alert-danger p-1 ps-3 userError d-none" role="alert">
+                        Please enter a valid User name!
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="Email" class="form-label">Email</label>
                     <input type="email" class="form-control shadow-none border-dark" id="Email" placeholder="Email">
+                    <div class="alert alert-danger p-1 ps-3 emilError d-none" role="alert">
+                        Please enter a valid Email!
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="Password" class="form-label">Password</label>
                     <input type="password" class="form-control shadow-none border-dark" id="Password"
                         placeholder="Password">
+                    <div class="alert alert-danger p-1 ps-3 passwordError d-none" role="alert">
+                        Please enter a valid Password ex:abcdAE123$
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="Contact" class="form-label">Contact</label>
-                    <input type="text" class="form-control shadow-none border-dark" id="Contact" placeholder="Contact">
+                    <input type="text" class="form-control shadow-none border-dark" id="Contact" placeholder="Contact"
+                        max="10" maxlength="10">
+                    <div class="alert alert-danger p-1 ps-3 contactError d-none" role="alert">
+                        Please enter a valid Contact!
+                    </div>
                 </div>
 
                 <div class="mb-3">
@@ -52,6 +65,9 @@
                         <!-- <button type="button" class="btn btn-link text-end"> Sign In</button> -->
                     </div>
                 </div>
+                <div class="alert alert-success success d-none" role="alert">
+                    Success!
+                </div>
 
             </div>
             <div class="col-md-6 d-none d-md-block" id="bg-img-form">
@@ -60,6 +76,25 @@
         </div>
     </div>
 
+
+
+    <!-- <div class="modal fade" id="successModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Hello
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <script>
         let userName, password, email, contact;
 
@@ -75,30 +110,64 @@
         const passwordRegEx = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!#$@^%&? "])[a-zA-Z0-9!#$@^%&?]{8,20}$/
 
         Signup.onclick = function () {
-
-
             if (!userRegEx.test(userName.value)) {
-                console.log('Please enter valid Name!');
+                // console.log('Please enter valid Name!');
+                document.querySelector('.userError').classList.remove('d-none');
                 return;
             } else if (!emailRegEx.test(email.value)) {
-                console.log('Please enter valid email!');
+                document.querySelector('.userError').classList.add('d-none');
+                document.querySelector('.emilError').classList.remove('d-none');
+                // console.log('Please enter valid email!');
                 return;
             } else if (!passwordRegEx.test(password.value)) {
-                console.log('Please enter valid password!');
+                document.querySelector('.emilError').classList.add('d-none');
+                document.querySelector('.passwordError').classList.remove('d-none');
+                // console.log('Please enter valid password!');
                 return;
             } else if (!contactRegEx.test(contact.value)) {
-                console.log('Please enter valid Contact!');
+                document.querySelector('.passwordError').classList.add('d-none');
+                document.querySelector('.contactError').classList.remove('d-none');
+                // console.log('Please enter valid Contact!');
                 return;
             } else {
+                document.querySelector('.userError').classList.add('d-none');
+                document.querySelector('.emilError').classList.add('d-none');
+                document.querySelector('.passwordError').classList.add('d-none');
+                document.querySelector('.contactError').classList.add('d-none');
                 alert('Success!');
                 console.log(userName.value, password.value, email.value, contact.value);
+
+
+                if (userName.value !== "" && password.value !== "" && email.value !== "" && contact.value !== "") {
+                    document.querySelector('.success').classList.remove('d-none');
+                }
+
+
+
+                let signUpData;
+
+                if (JSON.parse(localStorage.getItem('signUpData'))) {
+                    signUpData = JSON.parse(localStorage.getItem('signUpData'));
+                } else {
+                    signUpData = [];
+                }
+
+                signUpData.push({ name: userName.value, password: password.value, email: email.value, contact: contact.value })
+                localStorage.setItem('signUpData', JSON.stringify(signUpData));
 
                 userName.value = "";
                 password.value = "";
                 email.value = "";
                 contact.value = ""
 
-                window.location.href = "../bsTemp.html"
+                // window.location.href = "../bsTemp.html"
+
+                // localStorage.clear()
+                // localStorage.removeItem('signUpData')
+
+
+
+
             }
 
         }
